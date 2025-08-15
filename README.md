@@ -1,2 +1,2 @@
 # hangman_game
-hangman game but without graphic
+hangman game but without graphic V1
