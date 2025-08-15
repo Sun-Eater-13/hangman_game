@@ -3,13 +3,10 @@ import random
 
 wordlist = list(string.ascii_lowercase)
 
-with open("words_hangman.py", "r", encoding="utf-8") as second_file:
+with open("words_hangman.txt", "r", encoding="utf-8") as second_file:
     words_hangman = [line.strip() for line in second_file]
 
-while True:
-    correct_word = random.choice(words_hangman)
-    if len(correct_word) >= 5:
-        break
+correct_word = random.choice(words_hangman)
 
 blank_word = ""
 for letter in list(correct_word):
@@ -54,4 +51,5 @@ while max_incorrect_guesses > 0:
 if max_incorrect_guesses == 0:
     print(f"You lost. The correct word is {correct_word}")
 else:
+
     print("You won")
